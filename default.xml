@@ -18,7 +18,7 @@
            sync-c="true"
            sync-j="4" />
 
-  <project path="build" name="LineageOS/android_build" groups="pdk,tradefed" >
+  <project path="build" name="ProjectCrystalROM/android_build" groups="pdk,tradefed" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
 
@@ -26,7 +26,7 @@
 
   <project path="abi/cpp" name="LineageOS/android_abi_cpp" groups="pdk" />
   <project path="art" name="LineageOS/android_art" groups="pdk" />
-  <project path="bionic" name="LineageOS/android_bionic" groups="pdk" />
+  <project path="bionic" name="ProjectCrystalROM/android_bionic" groups="pdk" />
   <project path="bootable/recovery" name="LineageOS/android_bootable_recovery" groups="pdk" />
   <project path="cts" name="LineageOS/android_cts" groups="cts,pdk-cw-fs" />
   <project path="dalvik" name="LineageOS/android_dalvik" groups="pdk-cw-fs" />
@@ -73,7 +73,7 @@
   <project path="external/bash" name="LineageOS/android_external_bash" />
   <project path="external/bison" name="platform/external/bison" groups="pdk" remote="aosp" />
   <project path="external/blktrace" name="platform/external/blktrace" groups="pdk-cw-fs" remote="aosp" />
-  <project path="external/bluetooth/bluedroid" name="LineageOS/android_external_bluetooth_bluedroid" groups="pdk" />
+  <project path="external/bluetooth/bluedroid" name="ProjectCrystalROM/android_external_bluetooth_bluedroid" groups="pdk" />
   <project path="external/bouncycastle" name="LineageOS/android_external_bouncycastle" />
   <project path="external/bsdiff" name="platform/external/bsdiff" groups="pdk" remote="aosp" />
   <project path="external/bson" name="LineageOS/android_external_bson" />
@@ -335,7 +335,7 @@
   <project path="external/zopfli" name="platform/external/zopfli" groups="pdk-cw-fs" remote="aosp" />
   <project path="external/zxing" name="platform/external/zxing" groups="pdk-cw-fs" remote="aosp" />
   <project path="frameworks/av" name="LineageOS/android_frameworks_av" groups="pdk" />
-  <project path="frameworks/base" name="LineageOS/android_frameworks_base" />
+  <project path="frameworks/base" name="ProjectCrystalROM/android_frameworks_base" />
   <project path="frameworks/compile/libbcc" name="LineageOS/android_frameworks_compile_libbcc" groups="pdk" />
   <project path="frameworks/compile/mclinker" name="LineageOS/android_frameworks_compile_mclinker" groups="pdk" />
   <project path="frameworks/compile/slang" name="LineageOS/android_frameworks_compile_slang" groups="pdk" />
@@ -344,7 +344,7 @@
   <project path="frameworks/minikin" name="LineageOS/android_frameworks_minikin" groups="pdk-cw-fs" />
   <project path="frameworks/ml" name="LineageOS/android_frameworks_ml" />
   <project path="frameworks/multidex" name="LineageOS/android_frameworks_multidex" groups="pdk-cw-fs" />
-  <project path="frameworks/native" name="LineageOS/android_frameworks_native" groups="pdk" />
+  <project path="frameworks/native" name="ProjectCrystalROM/android_frameworks_native" groups="pdk" />
   <project path="frameworks/opt/bitmap" name="LineageOS/android_frameworks_opt_bitmap" />
   <project path="frameworks/opt/bluetooth" name="LineageOS/android_frameworks_opt_bluetooth" groups="pdk-cw-fs" />
   <project path="frameworks/opt/calendar" name="LineageOS/android_frameworks_opt_calendar" />
@@ -422,7 +422,7 @@
   <project path="hardware/qcom/msm8x74" name="platform/hardware/qcom/msm8x74" groups="qcom_msm8x74" remote="aosp" />
   <project path="hardware/qcom/msm8x84" name="platform/hardware/qcom/msm8x84" groups="qcom_msm8x84" remote="aosp" />
   <project path="hardware/qcom/wlan" name="LineageOS/android_hardware_qcom_wlan" groups="qcom_wlan" />
-  <project path="hardware/ril" name="LineageOS/android_hardware_ril" groups="pdk" />
+  <project path="hardware/ril" name="ProjectCrystalROM/android_hardware_ril" groups="pdk" />
   <project path="hardware/ril-caf" name="LineageOS/android_hardware_ril" groups="pdk" revision="cm-12.1-caf" />
   <project path="hardware/samsung_slsi/exynos5" name="LineageOS/android_hardware_samsung_slsi_exynos5" />
   <project path="hardware/ti/omap4" name="LineageOS/android_hardware_ti_omap4" />
@@ -455,7 +455,7 @@
   <project path="packages/apps/Eleven" name="LineageOS/android_packages_apps_Eleven" />
   <project path="packages/apps/Email" name="LineageOS/android_packages_apps_Email" />
   <project path="packages/apps/Exchange" name="LineageOS/android_packages_apps_Exchange" />
-  <project path="packages/apps/Gallery2" name="LineageOS/android_packages_apps_Gallery2" />
+  <project path="packages/apps/Gallery2" name="ProjectCrystalROM/android_packages_apps_Gallery2" />
   <project path="packages/apps/HTMLViewer" name="LineageOS/android_packages_apps_HTMLViewer" />
   <project path="packages/apps/InCallUI" name="LineageOS/android_packages_apps_InCallUI" />
   <project path="packages/apps/KeyChain" name="LineageOS/android_packages_apps_KeyChain" />
@@ -581,6 +581,12 @@
   <project path="tools/studio/cloud" name="platform/tools/studio/cloud" groups="notdefault,tools" remote="aosp" />
   <project path="tools/studio/translation" name="platform/tools/studio/translation" groups="notdefault,tools" remote="aosp" />
   <project path="tools/swt" name="platform/tools/swt" groups="notdefault,tools" remote="aosp" />
-  <project path="vendor/cm" name="LineageOS/android_vendor_cm" />
+  <project path="vendor/cm" name="ProjectCrystalROM/android_vendor_cm" />
   <project path="vendor/cmsdk" name="LineageOS/cm_platform_sdk" />
+  <!-- ProjectCrystalROM MS330 integration. -->
+  <project path="device/lge/m1" name="ProjectCrystalROM/cyanogenmod_device_lge_m1" revision="cm-12.1" />
+  <project path="device/lge/m1-common" name="ProjectCrystalROM/android_device_lge_m1-common" revision="cm-12.1" />
+  <project path="device/lge/msm8909-common" name="ProjectCrystalROM/android_device_lge_msm8909-common" revision="cm-12.1" />
+  <project path="vendor/lge/m1" name="ProjectCrystalROM/proprietary_vendor_lge_m1" revision="cm-12.1" />
+  <project path="kernel/lge/m1-custom" name="ProjectCrystalROM/cyanogenmod_kernel_lge_m1" revision="cm-12.1" />
 </manifest>
