@@ -1,50 +1,77 @@
-LineageOS
-===========
+# Project Crystal — Android Source Manifest
 
-Submitting Patches
-------------------
-Patches are always welcome!  Please submit your patches via LineageOS Gerrit!
-You can do this by using these commands:
+This repository contains the Android source manifest for **Project Crystal**.
 
-    (From root android directory)
-    . build/envsetup.sh
-    (Go to repo you are patching, make your changes and commit)
-    cmgerrit <for(new)/changes(patch set)> <branch/change-id> 
+Project Crystal is an independent Android development project. This manifest uses Project Crystal-maintained repositories where available and upstream LineageOS sources otherwise.
 
-    repo start cm-12.1 .
-    (Make your changes and commit)
-    repo upload .
-Note: "." meaning current directory
-For more help on using this tool, use this command: repo help upload
+**Project Crystal is not an official LineageOS distribution and is not affiliated with or endorsed by the LineageOS project.**
 
-Make your changes and commit with a detailed message, starting with what you are working with (i.e. vision: Update Kernel)
-Commit your patches in a single commit. Squash multiple commit using this command: git rebase -i HEAD~<# of commits>
+## Getting Started
 
-To view the status of your and others' patches, visit [LineageOS Code Review](http://review.lineageos.org/)
+Install Git, Google's `repo` tool, and the dependencies required to build your target Android version.
 
+Initialize the source tree:
 
-Getting Started
----------------
+```bash
+mkdir -p ~/project-crystal
+cd ~/project-crystal
+repo init -u https://github.com/ProjectCrystalROM/android.git -b cm-12.1
+```
 
-To get started with Android/LineageOS, you'll need to get
-familiar with [Git and Repo](http://source.android.com/source/using-repo.html).
+Synchronize the sources:
 
-To initialize your local repository using the LineageOS trees, use a command like this:
+```bash
+repo sync -j4
+```
 
-    repo init -u git://github.com/LineageOS/android.git -b cm-12.1
+The manifest handles repository selection automatically. You do not need to manually replace upstream URLs.
 
-Then to sync up:
+### Building
 
-    repo sync
+Once synchronization completes:
 
-Please see the [LineageOS Wiki](http://wiki.lineageos.org/) for building instructions.
+```bash
+source build/envsetup.sh
+```
 
-For more information on this Github Organization and how it is structured, 
-please [read the wiki article](http://wiki.lineageos.org/w/Github_Organization)
+Select a configured device target using the appropriate `lunch` command, then build using the commands supported by that device tree.
 
-Buildbot
---------
+Device-specific instructions and dependencies may vary.
 
-All supported devices are built nightly and periodically as changes are committed to ensure the source trees remain buildable.
+## Branches
 
-You can view the current build statuses at [LineageOS Jenkins](http://jenkins.lineageos.org/)
+Project Crystal retains upstream branch naming conventions, including `cm-12.1`, to maintain compatibility with existing source trees and build tooling.
+
+Branch names do not imply official CyanogenMod or LineageOS affiliation.
+
+## Contributing
+
+Patches are welcome!
+
+Project Crystal uses **GitHub pull requests** for contributions. We do not operate a Gerrit server.
+
+To contribute:
+
+1. Fork the relevant Project Crystal repository.
+2. Create a branch for your changes.
+3. Make and test your changes.
+4. Commit with a descriptive message.
+5. Open a pull request against the appropriate branch.
+
+Keep changes focused where practical and include relevant testing information.
+
+Example commit messages:
+
+```text
+msm8909: Fix GPS HAL callback handling
+manifest: Update repository mappings
+```
+
+### Upstream repositories
+
+Not every repository referenced by this manifest is maintained by Project Crystal.
+
+For repositories fetched directly from LineageOS, submit general fixes upstream or open an issue to discuss whether a Project Crystal-specific fork is necessary.
+
+### No Gerrit or CLA requirement
+
