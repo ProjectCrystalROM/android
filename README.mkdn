@@ -75,3 +75,22 @@ For repositories fetched directly from LineageOS, submit general fixes upstream 
 
 ### No Gerrit or CLA requirement
 
+Project Crystal does not require contributors to use Gerrit or sign a separate Contributor License Agreement.
+
+Contributions remain subject to the applicable open-source licenses.
+
+## Builds and Testing
+
+Project Crystal does not currently operate Jenkins, an automated buildbot, or a nightly-build service.
+
+Builds and patches are tested on a best-effort basis. Device support and build availability depend on the relevant source trees.
+
+## Credits
+
+Project Crystal builds upon the work of the Android Open Source Project, CyanogenMod, LineageOS, device maintainers, and the wider Android development community.
+
+We appreciate their contributions and retain applicable upstream licenses and attribution.
+
+**Source organization:** [ProjectCrystalROM](https://github.com/ProjectCrystalROM)
+
+**Manifest repository:** [ProjectCrystalROM/android](https://github.com/ProjectCrystalROM/android)
